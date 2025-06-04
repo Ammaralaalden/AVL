@@ -86,7 +86,7 @@ void BinarySearchTree::Node::node_balance()
 	}
 	if (left_size > right_size)
 	{
-		if (left_size - right_size < 1)
+		if (left_size - right_size < 2)
 		{
 			left->node_balance();
 			return;
