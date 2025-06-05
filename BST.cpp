@@ -216,26 +216,26 @@ void BinarySearchTree::Node::right_rot()  // правый поворот
 	Node* a = left;
 	Node* b = nullptr;
 	
-	if (left->right != nullptr)
+	if (left->right)
 	{
 		height_b = left->right->height();
 		b = left->right;
 	}
 	
-	if (left->left != nullptr)
+	if (left->left)
 	{
 		height_l = left->left->height();
 	}
 	
 	if (height_b <= height_l)
 	{
-		if (b != nullptr)
+		if (b)
 		{
 			b->parent = this;
 		}
 		left = b;
 		
-		if (parent != nullptr)
+		if (parent)
 		{
 			if (parent->left == this)
 			{
@@ -261,19 +261,19 @@ void BinarySearchTree::Node::right_rot()  // правый поворот
 		Node* b_left = b->left;
 		Node* b_right = b->right;
 		
-		if (b_right != nullptr)
+		if (b_right)
 		{
 			b_right->parent = this;
 		}
 		left = b_right;
 		
-		if (b_left != nullptr)
+		if (b_left)
 		{
 			b_left->parent = a;
 		}
 		a->right = b_left;
 		
-		if (parent != nullptr)
+		if (parent)
 		{
 			if (parent->left == this)
 			{
